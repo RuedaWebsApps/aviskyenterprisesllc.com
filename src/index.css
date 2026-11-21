@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-baskervville: 'Baskervville', Georgia, "Times New Roman", serif;
+    --font-worksans: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-merriweather: 'Merriweather', Georgia, serif;
+    --color-brand-gold: #957d3e;
+    --color-nav-gold: #a07a19;
+    --color-card-surface: #f2f4f9;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-worksans);
+    color: #666666;
+    background-color: #ffffff;
+  }
+
+  h1, h2, h3, h6 {
+    font-family: var(--font-baskervville);
+  }
+}
+
+.font-baskervville {
+  font-family: var(--font-baskervville);
+}
+
+.font-worksans {
+  font-family: var(--font-worksans);
+}
+
+.font-merriweather {
+  font-family: var(--font-merriweather);
+}
+
+/* Exact Divi Section 0 Hero Gradient Overlay */
+.divi-hero-bg {
+  background-image:
+    linear-gradient(110deg, #ffffff 27%, rgba(255, 255, 255, 0.5) 100%),
+    url('/images/architect-1.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Exact Divi Section 3 Solutions Card Shadow & Hover Lift */
+.divi-solutions-card {
+  background-color: #f2f4f9;
+  box-shadow: 11px 12px 16px 0px rgba(0, 0, 0, 0.3);
+  transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.divi-solutions-card:hover {
+  transform: translate(-4px, -5px);
+}
+
+/* Exact Divi Section 5 Testimonials Split Background */
+.divi-testimonials-bg {
+  background-image:
+    linear-gradient(90deg, rgba(255, 255, 255, 0) 60%, #957d3e 60%),
+    url('/images/engineering-firm-27.webp');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+/* Exact Divi Section 6 Footer Contact Architectural Line Art */
+.divi-contact-bg {
+  background-color: #000000;
+  background-image: url('/images/architect-10.webp');
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 24%;
+}
