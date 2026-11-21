@@ -13,10 +13,10 @@ export const CtaAssessmentSection: React.FC<CtaAssessmentSectionProps> = ({ loca
       aria-label="Call to Action"
       className="relative w-full overflow-hidden bg-white py-0"
     >
-      <div className="mx-auto flex w-[80%] max-w-[1080px] flex-col lg:flex-row lg:items-start lg:gap-[5.5%]">
+      <div className="mx-auto flex w-[80%] max-w-[1080px] flex-col pt-0 pb-[27px] lg:flex-row lg:items-start lg:gap-[5.5%]">
         {/* Left Column (1_2): custom_padding="8%||8%||true|false" */}
         <div className="w-full py-[8%] lg:w-[47.25%]">
-          <h2 className="font-baskervville mb-[27px] text-[20px] leading-[1.2em] font-medium text-[#000000] sm:text-[32px] lg:text-[50px]">
+          <h2 className="font-baskervville mb-[27px] pb-[10px] text-[20px] leading-[1.2em] font-medium text-[#333333] sm:text-[32px] lg:text-[50px]">
             {c.h2}
           </h2>
 
@@ -25,7 +25,7 @@ export const CtaAssessmentSection: React.FC<CtaAssessmentSectionProps> = ({ loca
               src={c.leftImage}
               alt={c.leftImageAlt}
               width={800}
-              height={552}
+              height={800}
               loading="lazy"
               className="h-auto w-full object-cover"
             />
@@ -42,8 +42,8 @@ export const CtaAssessmentSection: React.FC<CtaAssessmentSectionProps> = ({ loca
             <img
               src={c.rightImage}
               alt={c.rightImageAlt}
-              width={800}
-              height={882}
+              width={1200}
+              height={1200}
               loading="lazy"
               className="block h-auto w-full object-cover"
             />
@@ -52,10 +52,10 @@ export const CtaAssessmentSection: React.FC<CtaAssessmentSectionProps> = ({ loca
             src={c.rightOverlayImage}
             alt=""
             aria-hidden="true"
-            width={632}
-            height={632}
+            width={800}
+            height={800}
             loading="lazy"
-            className="pointer-events-none absolute bottom-0 left-0 h-auto w-[70%] max-w-[460px] lg:w-auto"
+            className="pointer-events-none absolute bottom-0 left-0 h-auto w-[70%] lg:w-full"
           />
         </div>
       </div>

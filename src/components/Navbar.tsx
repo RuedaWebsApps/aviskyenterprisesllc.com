@@ -21,10 +21,11 @@ export const Navbar: React.FC<NavbarProps> = ({ locale }) => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  // Exact live Divi menu order: Home -> Testimonies -> About us -> Contact us
   const navItems = [
     { label: c.nav.home, href: '#' },
-    { label: c.nav.about, href: '#Aboutus' },
     { label: c.nav.testimonies, href: '#Testimonies' },
+    { label: c.nav.about, href: '#Aboutus' },
     { label: c.nav.contact, href: '#contactus' },
   ];
 
@@ -37,8 +38,8 @@ export const Navbar: React.FC<NavbarProps> = ({ locale }) => {
           : 'h-[80px] shadow-[0_1px_0_rgba(0,0,0,0.1)]'
       }`}
     >
-      <div className="mx-auto flex h-full max-w-[1080px] items-center justify-between px-4 sm:px-6 lg:px-0">
-        {/* Brand Logo */}
+      <div className="mx-auto flex h-full w-[80%] max-w-[1080px] items-center justify-between">
+        {/* Brand Logo (Divi #logo max-height: 54% -> 43.2px at 80px header, 29.2px at 54px header) */}
         <a
           href={locale === 'es' ? '/es' : '/'}
           className="flex items-center focus:outline-none"
@@ -47,15 +48,15 @@ export const Navbar: React.FC<NavbarProps> = ({ locale }) => {
           <img
             src={SITE_INFO.logo}
             alt={SITE_INFO.name}
-            width={162}
-            height={54}
+            width={130}
+            height={43}
             className={`w-auto object-contain transition-all duration-300 ${
-              scrolled ? 'max-h-[36px]' : 'max-h-[54px]'
+              scrolled ? 'max-h-[29px]' : 'max-h-[43px]'
             }`}
           />
         </a>
 
-        {/* Desktop Divi Primary Navigation */}
+        {/* Desktop Divi Primary Navigation (#top-menu: Open Sans 14px, 600 weight, 22px spacing) */}
         <nav aria-label="Primary Navigation" className="hidden items-center gap-[22px] md:flex">
           {navItems.map((item) => {
             const isActive = activeHash === item.href;
@@ -64,10 +65,10 @@ export const Navbar: React.FC<NavbarProps> = ({ locale }) => {
                 key={item.href}
                 href={item.href}
                 onClick={() => setActiveHash(item.href)}
-                className={`font-worksans text-[14px] font-medium transition-colors duration-200 ${
+                className={`font-opensans text-[14px] font-semibold transition-colors duration-200 ${
                   isActive
                     ? 'text-[#a07a19]'
-                    : 'text-black/60 hover:text-black/90'
+                    : 'text-black/60 hover:text-black/80'
                 }`}
               >
                 {item.label}
@@ -77,7 +78,7 @@ export const Navbar: React.FC<NavbarProps> = ({ locale }) => {
 
           <a
             href={c.nav.langSwitchHref}
-            className="ml-2 rounded border border-[#957d3e]/40 px-2.5 py-0.5 font-worksans text-[12px] font-semibold tracking-wider text-[#957d3e] transition-colors hover:bg-[#957d3e] hover:text-white"
+            className="font-opensans ml-1 rounded border border-[#957d3e]/35 px-2 py-0.5 text-[11px] font-semibold tracking-wider text-[#957d3e] transition-colors hover:bg-[#957d3e] hover:text-white"
             aria-label={`Switch language to ${c.nav.langSwitchLabel}`}
           >
             {c.nav.langSwitchLabel}
@@ -88,7 +89,7 @@ export const Navbar: React.FC<NavbarProps> = ({ locale }) => {
         <div className="flex items-center gap-3 md:hidden">
           <a
             href={c.nav.langSwitchHref}
-            className="rounded border border-[#957d3e]/40 px-2 py-0.5 font-worksans text-[12px] font-semibold text-[#957d3e]"
+            className="font-opensans rounded border border-[#957d3e]/40 px-2 py-0.5 text-[11px] font-semibold text-[#957d3e]"
           >
             {c.nav.langSwitchLabel}
           </a>
@@ -116,7 +117,7 @@ export const Navbar: React.FC<NavbarProps> = ({ locale }) => {
                     setActiveHash(item.href);
                     setMobileOpen(false);
                   }}
-                  className="block border-b border-black/5 py-2 font-worksans text-[14px] font-medium text-black/70 hover:text-[#a07a19]"
+                  className="font-opensans block border-b border-black/5 py-2 text-[14px] font-semibold text-black/70 hover:text-[#a07a19]"
                 >
                   {item.label}
                 </a>

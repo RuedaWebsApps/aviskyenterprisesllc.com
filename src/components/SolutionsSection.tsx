@@ -10,7 +10,7 @@ export const SolutionsSection: React.FC<SolutionsSectionProps> = ({ locale }) =>
 
   return (
     <>
-      {/* Divi Section 2: Gold Banner #Aboutus (max-width: 610px) */}
+      {/* Divi Section 2: Gold Banner #Aboutus (max-width: 610px, row padding 27px 0) */}
       <section
         id="Aboutus"
         aria-label="Professional Strategy Consulting"
@@ -20,7 +20,7 @@ export const SolutionsSection: React.FC<SolutionsSectionProps> = ({ locale }) =>
           <h2 className="font-baskervville mb-0 pb-[10px] text-[20px] leading-[1.2em] font-medium text-white sm:text-[32px] lg:text-[50px]">
             {aboutBanner.h2}
           </h2>
-          <p className="font-worksans text-[14px] leading-[1.8em] font-medium text-white sm:text-[15px] lg:text-[16px]">
+          <p className="font-worksans pb-[1em] text-[14px] leading-[1.8em] font-medium text-white sm:text-[15px] lg:text-[16px]">
             <span>{aboutBanner.paragraph}&nbsp;&nbsp;</span>
           </p>
         </div>
@@ -31,9 +31,9 @@ export const SolutionsSection: React.FC<SolutionsSectionProps> = ({ locale }) =>
         aria-label="Services"
         className="w-full bg-white pt-[54px] pb-[106px]"
       >
-        {/* Row 1: Heading (max_width="870px") */}
+        {/* Row 1: Heading (max_width="870px", py 27px) */}
         <div className="mx-auto w-[80%] max-w-[870px] py-[27px] text-center">
-          <h2 className="font-baskervville text-[20px] leading-[1.2em] font-medium text-[#000000] sm:text-[32px] lg:text-[50px]">
+          <h2 className="font-baskervville pb-[10px] text-[20px] leading-[1.2em] font-medium text-[#333333] sm:text-[32px] lg:text-[50px]">
             {solutions.h2}
           </h2>
         </div>
@@ -44,12 +44,14 @@ export const SolutionsSection: React.FC<SolutionsSectionProps> = ({ locale }) =>
             {solutions.blurbs.map((blurb, idx) => (
               <div
                 key={idx}
-                className="font-worksans mx-auto mb-[20px] max-w-[980px] text-center text-[12px] leading-[1.8em] text-[#000000] last:mb-0 sm:text-[15px] lg:text-[16px]"
+                className={`font-opensans mx-auto mb-[20px] text-center text-[12px] leading-[1.8em] font-medium text-[#000000] last:mb-0 sm:text-[15px] lg:text-[16px] ${
+                  idx === 1 ? 'min-h-[186.8px]' : ''
+                } ${idx >= 2 ? 'pl-[6px]' : ''}`}
               >
                 {idx === 1 || idx === 4 ? (
                   <>
-                    <p className="mb-3">
-                      <strong className="font-bold">{blurb.lead}</strong>
+                    <p className="pb-[1em]">
+                      <strong className="font-bold">{blurb.lead}&nbsp;</strong>
                     </p>
                     <p>{blurb.body}</p>
                   </>
@@ -57,7 +59,7 @@ export const SolutionsSection: React.FC<SolutionsSectionProps> = ({ locale }) =>
                   <p>
                     <strong className="font-bold">{blurb.lead}</strong>
                     <br />
-                    <span>{blurb.body}</span>
+                    <span>{idx === 2 ? blurb.body : `\u00A0${blurb.body}`}</span>
                   </p>
                 )}
               </div>
@@ -75,7 +77,7 @@ export const SolutionsSection: React.FC<SolutionsSectionProps> = ({ locale }) =>
           <h2 className="font-baskervville mb-0 pb-[10px] text-[20px] leading-[1.2em] font-medium text-white sm:text-[32px] lg:text-[38px]">
             <span>{transformBanner.h2}</span>
           </h2>
-          <p className="font-worksans text-[14px] leading-[1.8em] font-medium text-white sm:text-[15px] lg:text-[16px]">
+          <p className="font-worksans pb-[1em] text-[14px] leading-[1.8em] font-medium text-white sm:text-[15px] lg:text-[16px]">
             <span>{transformBanner.paragraph}</span>
           </p>
         </div>

@@ -95,7 +95,7 @@ export const SITE_CONTENT: Record<Locale, SiteContent> = {
   en: {
     locale: 'en',
     seo: {
-      title: 'Avi Sky – Empower Your Business with Avi Sky Enterprises LLC',
+      title: 'Avi Sky | Enterprises LLC',
       description:
         "In today's competitive landscape, businesses need more than just good ideas; they need impactful execution and a clear path to growth. Partner with Avi Sky Enterprises LLC.",
       canonical: 'https://aviskyenterprisesllc.com/',
@@ -126,7 +126,7 @@ export const SITE_CONTENT: Record<Locale, SiteContent> = {
       rightOverlayImage: '/images/architect-3-overlay.webp',
     },
     aboutBanner: {
-      h2: 'Professional  Strategy Consulting',
+      h2: 'Professional\u00A0 Strategy Consulting',
       paragraph:
         "We strive to be an innovative marketing company that consistently drives exceptional performance, demonstrates unparalleled strategic prowess, and creates a significant, measurable impact on both our clients' success and the industry at large",
     },
